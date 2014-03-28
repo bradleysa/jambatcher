@@ -1,0 +1,41 @@
+<h1>Listing batches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Variety</th>
+      <th>Fruit source</th>
+      <th>Batch number</th>
+      <th>Cooking time</th>
+      <th>Four oz Yield</th>
+      <th>Eight oz Yield</th>
+      <th>Cooking notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @batches.each do |batch| %>
+      <tr>
+        <td><%= batch.date %></td>
+        <td><%= batch.variety %></td>
+        <td><%= batch.fruit_source %></td>
+        <td><%= batch.batch_number %></td>
+        <td><%= batch.cooking_time %></td>
+        <td><%= batch.four_oz_yield %></td>
+        <td><%= batch.eight_oz_yield %></td>
+        <td><%= batch.cooking_notes %></td>
+        <td><%= link_to 'Show', batch %></td>
+        <td><%= link_to 'Edit', edit_batch_path(batch) %></td>
+        <td><%= link_to 'Destroy', batch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Batch', new_batch_path %>

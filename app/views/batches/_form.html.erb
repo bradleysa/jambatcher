@@ -1,0 +1,49 @@
+<%= form_for(@batch) do |f| %>
+  <% if @batch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@batch.errors.count, "error") %> prohibited this batch from being saved:</h2>
+
+      <ul>
+      <% @batch.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :variety %><br>
+    <%= f.text_field :variety %>
+  </div>
+  <div class="field">
+    <%= f.label :fruit_source %><br>
+    <%= f.text_field :fruit_source %>
+  </div>
+  <div class="field">
+    <%= f.label :batch_number %><br>
+    <%= f.text_field :batch_number %>
+  </div>
+  <div class="field">
+    <%= f.label :cooking_time %><br>
+    <%= f.text_field :cooking_time %>
+  </div>
+  <div class="field">
+    <%= f.label :four_oz_yield %><br>
+    <%= f.text_field :four_oz_yield %>
+  </div>
+  <div class="field">
+    <%= f.label :eight_oz_yield %><br>
+    <%= f.text_field :eight_oz_yield %>
+  </div>
+  <div class="field">
+    <%= f.label :cooking_notes %><br>
+    <%= f.text_area :cooking_notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

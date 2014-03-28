@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @batch.date %>
+</p>
+
+<p>
+  <strong>Variety:</strong>
+  <%= @batch.variety %>
+</p>
+
+<p>
+  <strong>Fruit source:</strong>
+  <%= @batch.fruit_source %>
+</p>
+
+<p>
+  <strong>Batch number:</strong>
+  <%= @batch.batch_number %>
+</p>
+
+<p>
+  <strong>Cooking time:</strong>
+  <%= @batch.cooking_time %>
+</p>
+
+<p>
+  <strong>Yield 4 oz:</strong>
+  <%= @batch.four_oz_yield %>
+</p>
+
+<p>
+  <strong>Yield 8 oz:</strong>
+  <%= @batch.eight_oz_yield %>
+</p>
+
+<p>
+  <strong>Cooking notes:</strong>
+  <%= @batch.cooking_notes %>
+</p>
+
+<%= link_to 'Edit', edit_batch_path(@batch) %> |
+<%= link_to 'Back', batches_path %>

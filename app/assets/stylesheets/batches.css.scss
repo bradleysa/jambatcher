@@ -1,0 +1,18 @@
+// Place all the styles related to the Batches controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {background-color:#eee;}
+body {background-color:#eee;}
+table tr {
+	background-color: #eee;
+}
+table, th, td {
+	border: solid 1px #eee;
+	background-color: #fff;
+	border-collapse: collapse;
+	text-align: left;
+}
+table td, table th {
+	padding: 10px;
+}
